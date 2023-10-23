@@ -1,18 +1,33 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+    <h1>{{ title }}</h1>
+    <p>{{ message }}</p>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import { ref, computed } from 'vue';
 
 export default {
-  name: 'HomeView',
-  components: {
-    HelloWorld
-  }
-}
+  name: 'MyComponent',
+  setup() {
+    const title = ref('Meine Vue.js App');
+    const message = ref('Willkommen zur Composition API!');
+
+    const formattedMessage = computed(() => {
+      return message.value.toUpperCase();
+    });
+
+    function changeMessage() {
+      message.value = 'Der Text wurde geändert!';
+    }
+
+    return {
+      title,
+      message,
+      formattedMessage,
+      changeMessage,
+    };
+  },
+};
 </script>
