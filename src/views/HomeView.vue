@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import { ref, computed } from 'vue';
+import { ref } from 'vue';
 
 export default {
   name: 'MyComponent',
@@ -14,19 +14,10 @@ export default {
     const title = ref('Meine Vue.js App');
     const message = ref('Willkommen zur Composition API!');
 
-    const formattedMessage = computed(() => {
-      return message.value.toUpperCase();
-    });
-
-    function changeMessage() {
-      message.value = 'Der Text wurde geändert!';
-    }
 
     return {
       title,
-      message,
-      formattedMessage,
-      changeMessage,
+      message
     };
   },
 };
