@@ -1,8 +1,6 @@
 <template>
   <section class="quiz">
-
-    <h1 style="grid-column-start: 2;">Das ist die Quiz-Seite</h1>
-    <p style="grid-column-start: 2;">{{ title }}</p>
+    <h1 style="grid-column-start: 2;">Take the Quiz!</h1>
     <Question1 />
 
   </section>
@@ -10,9 +8,6 @@
 
 <script setup>
 import Question1 from '@/components/Question1.vue';
-
-
-let title = 'Frage 1';
 
 </script>
 
@@ -26,4 +21,3 @@ let title = 'Frage 1';
     ". . .";
 }
 </style>
-```
