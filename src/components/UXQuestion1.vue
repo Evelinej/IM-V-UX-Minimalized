@@ -1,8 +1,4 @@
 <template>
-    <head>
-        <h2>Frage 1</h2>
-        <p>Du möchtest dich auf dieser Seite anmelden. Was machst du um dich anzumelden?</p>
-    </head>
     <section class="question">
         <div class="tab">
             <button class="minimize" @click="minimize()">_</button>
@@ -31,9 +27,9 @@
 import { defineProps, defineEmits } from 'vue';
 
 // Props und Emits definieren
-const { success } = defineProps(['success']);
+const { success1 } = defineProps(['success1']);
 
-const emits = defineEmits(['validationSuccess']);
+const emits = defineEmits(['validationsuccess1']);
 
 // zeigt das Passwort an oder versteckt es
 function togglePassword() {
@@ -63,7 +59,7 @@ function validateAnswer() {
     adviceStar.style.color = hasStar ? "green" : "red";
 
     if (adviceNumber.style.color === "green" && adviceLetter.style.color === "green" && adviceCapitalLetter.style.color === "green" && adviceStar.style.color === "green") {
-        emits('validationSuccess', true); // Löse das Ereignis aus, um den Erfolg der Validierung zurückzugeben
+        emits('validationsuccess1', true); // Löse das Ereignis aus, um den Erfolg der Validierung zurückzugeben
     }
 
 }

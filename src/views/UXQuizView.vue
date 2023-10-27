@@ -1,32 +1,45 @@
 <template>
   <section class="quiz">
     <h1 style="grid-column-start: 2;">Take the Quiz!</h1>
-    <UXQuestion1 v-if="!success" :success="success" @validationSuccess="onValidationSuccess" />
+    <UXQuestion1 v-if="!success1" :success1="success1" @validationsuccess1="onValidationsuccess1" />
+    <UXQuestion2 v-if="success1 && !success2" :success2="success2" @validationsuccess2="onValidationsuccess2" />
   </section>
 </template>
 
 <script>
 import UXQuestion1 from '@/components/UXQuestion1.vue';
+import UXQuestion2 from '@/components/UXQuestion2.vue';
 
 export default {
   components: {
     UXQuestion1,
+    UXQuestion2,
   },
   data() {
     return {
-      success: false, // Initialisieren der success-Variable
+      success1: false, // Initialisieren der success1-Variable
+      success2: false, // Initialisieren der success2-Variable
     };
   },
   methods: {
-    onValidationSuccess(isSuccess) {
-      if (isSuccess) {
-        this.success = true;
+    onValidationsuccess1(issuccess1) {
+      if (issuccess1) {
+        this.success1 = true;
         console.log('Validierung erfolgreich');
       } else {
-        this.success = false;
+        this.success1 = false;
         console.log('Validierung nicht erfolgreich');
       }
     },
+    onValidationsuccess2(issuccess2) {
+      if (issuccess2) {
+        this.success2 = true;
+        console.log('Validierung erfolgreich');
+      } else {
+        this.success2 = false;
+        console.log('Validierung nicht erfolgreich');
+      }
+    }
   },
 };
 </script>
