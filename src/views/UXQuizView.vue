@@ -7,8 +7,10 @@
 </template>
 
 <script>
+// Komponenten importieren
 import UXQuestion1 from '@/components/UXQuestion1.vue';
 import UXQuestion2 from '@/components/UXQuestion2.vue';
+
 
 export default {
   components: {
