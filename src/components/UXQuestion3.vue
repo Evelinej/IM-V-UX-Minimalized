@@ -6,8 +6,7 @@
             <button class="close" @click="close()">X</button>
         </div>
         <div class="content">
-            <h2>Komponente 2</h2><br>
-            <button @click="setTrue()">Validate</button>
+            <h2>Komponente 3</h2>
         </div>
     </section>
 </template>
@@ -17,13 +16,15 @@
 import { defineProps, defineEmits } from 'vue';
 
 // Props und Emits definieren
-const { success2 } = defineProps(['success2']);
+const { success3 } = defineProps(['success3']);
 
-const emits = defineEmits(['validationsuccess2']);
+const emits = defineEmits(['validationsuccess3']);
 
-function setTrue() {
-    emits('validationsuccess2', true);
-}
+// prüft die Eingaben
+
+//     if (adviceNumber.style.color === "green" && adviceLetter.style.color === "green" && adviceCapitalLetter.style.color === "green" && adviceStar.style.color === "green") {
+//         emits('validationsuccess3', true); // Löse das Ereignis aus, um den Erfolg der Validierung zurückzugeben
+//     }
 
 // Fenster minimieren
 function minimize() {
@@ -37,7 +38,7 @@ function maximize() {
 
 // Fenster schliessen
 function close() {
-    alert("Der einfache Weg bringt dich noch immer nicht ans Ziel. Versuch doch stattdessen die Aufgabe zu lösen.");
+    window.open("https://i.pinimg.com/736x/1b/b5/0f/1bb50f6255e0456c41682811e14d7d8f.jpg", "_self");
 }
 
 

@@ -1,4 +1,6 @@
 <template>
+  <!-- https://796765-8.web.fhgr.ch -->
+  <!-- IM V | UX-Minimalized -->
   <nav>
     <router-link to="/">Home</router-link> |
     <router-link to="/uxquiz">UX-Quiz</router-link> |
