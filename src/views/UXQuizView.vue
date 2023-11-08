@@ -3,7 +3,8 @@
     <h1 style="grid-column-start: 2;">Take the Quiz!</h1>
     <UXQuestion1 v-if="!success1" :success1="success1" @validationsuccess1="onValidationsuccess1" />
     <UXQuestion2 v-if="success1 && !success2" :success2="success2" @validationsuccess2="onValidationsuccess2" />
-    <UXQuestion3 v-if="success1 && success2 && !success3" :success3="success3" @validationsuccess3="onValidationsuccess3" />
+    <UXQuestion3 v-if="success1 && success2 && !success3" :success3="success3"
+      @validationsuccess3="onValidationsuccess3" />
   </section>
 </template>
 
@@ -60,6 +61,13 @@ export default {
 </script>
 
 <style>
+/* Farben */
+:root {
+  --color1: #ffffb2;
+  --color2: #d7fcff;
+  --color3: #eacdff;
+}
+
 .quiz {
   display: grid;
   grid-template-columns: 1fr 5fr 1fr;
@@ -67,5 +75,66 @@ export default {
   gap: 0px 5px;
   grid-template-areas:
     ". . .";
+}
+
+.question {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 10fr;
+  grid-template-areas:
+    "."
+    ".";
+  grid-column-start: 2;
+  height: 60vh;
+}
+
+.tab {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  border-color: darkslategray;
+  border-style: solid;
+  background: rgb(255, 255, 178);
+  background: linear-gradient(90deg, rgba(255, 255, 178, 1) 0%, rgba(215, 252, 255, 1) 71%, rgba(234, 205, 255, 1) 100%);
+}
+
+.content {
+  border-color: darkslategray;
+  border-style: solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2em;
+}
+
+button {
+  margin: 5px;
+  border-color: darkslategray;
+  border-style: solid;
+  border-width: 2px;
+  width: 30px;
+  height: 30px;
+  background-color: white;
+  box-shadow: 1px 1px #999;
+}
+
+button:hover {
+  background-color: var(--color1);
+}
+
+button:active {
+  background-color: var(--color1);
+  box-shadow: 0 0 #999;
+}
+
+svg {
+  width: 15px;
+  height: 15px;
+}
+
+.questionText {
+    grid-template-rows: 1fr;
+    grid-column-start: 2;
+    height: auto;
 }
 </style>

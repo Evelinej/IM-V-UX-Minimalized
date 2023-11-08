@@ -1,9 +1,40 @@
 <template>
+    <section class="questionText">
+        <h4>Du möchtest dich hier registrieren. Fülle die Felder korrekt aus um das zu erreichen.</h4>
+    </section>
     <section class="question">
         <div class="tab">
-            <button class="minimize" @click="minimize()">_</button>
-            <button class="maximize" @click="maximize()">O</button>
-            <button class="close" @click="close()">X</button>
+            <button class="minimize" @click="minimize()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 35 35">
+                    <g id="Gruppe_4" data-name="Gruppe 4" transform="translate(-114 -52)">
+                        <line id="Linie_5" data-name="Linie 5" x2="25.638" transform="translate(121.181 83.337)" fill="none"
+                            stroke="#2f4f4f" stroke-width="5" />
+                    </g>
+                </svg>
+            </button>
+            <button class="maximize" @click="maximize()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 35 35">
+                    <g id="Gruppe_2" data-name="Gruppe 2" transform="translate(-189 -52)">
+                        <g id="Rechteck_4" data-name="Rechteck 4" transform="translate(194 58)" fill="#fff" stroke="#2f4f4f"
+                            stroke-width="1">
+                            <rect x="1" y="1" width="28" height="25" fill="none" />
+                        </g>
+                        <rect id="Rechteck_5" data-name="Rechteck 5" width="30" height="6" transform="translate(194 58)"
+                            fill="#2f4f4f" />
+                    </g>
+                </svg>
+            </button>
+            <button class="close" @click="close()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 35 35">
+                    <g id="Gruppe_3" data-name="Gruppe 3" transform="translate(-261 -52)">
+                        <line id="Linie_1" data-name="Linie 1" x2="24.276" y2="24.674" transform="translate(268.862 59.663)"
+                            fill="none" stroke="#2f4f4f" stroke-width="2" />
+                        <line id="Linie_2" data-name="Linie 2" x2="24.276" y2="24.674"
+                            transform="translate(293.337 59.862) rotate(90)" fill="none" stroke="#2f4f4f"
+                            stroke-width="2" />
+                    </g>
+                </svg>
+            </button>
         </div>
         <div class="content">
             <div>
@@ -83,64 +114,7 @@ function close() {
 
 </script>
 
-<style>
-/* Farben */
-:root {
-    --color1: #ffffb2;
-    --color2: #d7fcff;
-    --color3: #eacdff;
-}
-
-.question {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 10fr;
-    grid-template-areas:
-        "."
-        ".";
-    grid-column-start: 2;
-    height: 60vh;
-}
-
-.tab {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    border-color: darkslategray;
-    border-style: solid;
-    background: rgb(255, 255, 178);
-    background: linear-gradient(90deg, rgba(255, 255, 178, 1) 0%, rgba(215, 252, 255, 1) 71%, rgba(234, 205, 255, 1) 100%);
-}
-
-.content {
-    border-color: darkslategray;
-    border-style: solid;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 2em;
-}
-
-button {
-    margin: 5px;
-    border-color: darkslategray;
-    border-style: solid;
-    border-width: 2px;
-    width: 30px;
-    height: 30px;
-    background-color: white;
-    box-shadow: 1px 1px #999;
-}
-
-button:hover {
-    background-color: var(--color1);
-}
-
-button:active {
-    background-color: var(--color1);
-    box-shadow: 0 0 #999;
-}
-
+<style scooped>
 .content p {
     font-size: 0.5em;
 }
@@ -211,5 +185,4 @@ input[type="password"] {
 
 #togglePW:hover {
     color: darkslategray;
-}
-</style>
+}</style>
