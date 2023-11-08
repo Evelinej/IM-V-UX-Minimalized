@@ -44,7 +44,7 @@
                         <ul>
                             <li><a @click="wrongAnswer2">←</a></li>
                             <li><a @click="setTrue">→</a></li>
-                            <li><a @click="wrongAnswer2">⇒</a></li>
+                            <li><a @click="wrongAnswer3">⇒</a></li>
                         </ul>
                     </li>
                     <li><a @click="wrongAnswer1">Fun-Quiz</a>
@@ -58,7 +58,7 @@
             </nav>
             <div>
                 <h2>Ich bin der Titel einer Website</h2>
-                <p>Hier gehts zur übernächsten Frage <a @click="wrongAnswer3()">⇒</a></p>
+                <p><a @click="wrongAnswer3">Hier ist der Inhalt der Seite.</a></p>
             </div>
         </div>
     </section>

@@ -128,8 +128,8 @@ button:active {
 }
 
 svg {
-  width: 15px;
-  height: 15px;
+  width: 14px;
+  height: 14px;
 }
 
 .questionText {
