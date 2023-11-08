@@ -9,11 +9,28 @@
   <router-view />
 </template>
 
+<script setup>
+
+// import { createApp } from 'vue'
+
+// const app = createApp({})
+
+// app.provide(/* key */ 'message', /* value */ 'hello!')
+
+</script>
+
 <style>
 @font-face {
   font-family: "Hepta Slab";
   src: local("Hepta Slab"),
    url(./assets/fonts/HeptaSlab-Regular.ttf) format("truetype");
+}
+
+/* Farben */
+:root {
+    --color1: #ffffb2;
+    --color2: #d7fcff;
+    --color3: #eacdff;
 }
 
 h2 {

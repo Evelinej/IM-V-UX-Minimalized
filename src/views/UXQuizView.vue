@@ -1,10 +1,14 @@
 <template>
-  <section class="quiz">
-    <h1 style="grid-column-start: 2;">Take the Quiz!</h1>
+  <section v-if="success3 === false" class="quiz">
+    <h2 style="grid-column-start: 2;">Take the Quiz!</h2>
     <UXQuestion1 v-if="!success1" :success1="success1" @validationsuccess1="onValidationsuccess1" />
     <UXQuestion2 v-if="success1 && !success2" :success2="success2" @validationsuccess2="onValidationsuccess2" />
     <UXQuestion3 v-if="success1 && success2 && !success3" :success3="success3"
       @validationsuccess3="onValidationsuccess3" />
+  </section>
+  <section v-else class="congrats">
+    <h2>Gratuliere!</h2>
+    <p>Du hast das Quiz geschafft! Und ja, bei der letzten Aufgabe konntest du 3 von 4 Icons anwählen!</p>
   </section>
 </template>
 
@@ -133,8 +137,8 @@ svg {
 }
 
 .questionText {
-    grid-template-rows: 1fr;
-    grid-column-start: 2;
-    height: auto;
+  grid-template-rows: 1fr;
+  grid-column-start: 2;
+  height: auto;
 }
 </style>
