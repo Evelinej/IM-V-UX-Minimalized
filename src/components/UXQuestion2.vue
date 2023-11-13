@@ -40,14 +40,14 @@
             <nav class="navigation">
                 <ul>
                     <li><a @click="wrongAnswer1">IM V | UX-Minimalized</a></li>
-                    <li><a @click="wrongAnswer1">UX-Quiz</a>
+                    <li><a @click="wrongAnswer4">UX-Quiz</a>
                         <ul>
                             <li><a @click="wrongAnswer2">←</a></li>
                             <li><a @click="setTrue">→</a></li>
                             <li><a @click="wrongAnswer3">⇒</a></li>
                         </ul>
                     </li>
-                    <li><a @click="wrongAnswer1">Fun-Quiz</a>
+                    <li><a @click="wrongAnswer4">Fun-Quiz</a>
                         <ul>
                             <li><a @click="wrongAnswer2">Frage 1</a></li>
                             <li><a @click="wrongAnswer2">Frage 2</a></li>
@@ -88,6 +88,16 @@ function wrongAnswer3() {
     alert("nope.");
 }
 
+// Funktion für falsche Antwort mit kleinem Screen
+function wrongAnswer4() {
+    if (window.matchMedia("(max-width: 768px)").matches) {
+    } if (window.matchMedia("(max-width: 400px)").matches) {
+    }
+    else {
+        alert("Leider falsch.");
+    }
+}
+
 function setTrue() {
     emits('validationsuccess2', true);
 }
@@ -119,11 +129,13 @@ a {
 nav ul {
     list-style: none;
     padding: 0;
+    justify-content: space-around;
 }
 
 nav ul li {
     display: inline-block;
     position: relative;
+    flex: 1;
 }
 
 nav ul li a {
@@ -137,6 +149,8 @@ nav ul ul {
     position: absolute;
     top: 100%;
     left: 0;
+    z-index: 1; 
+    width: 100%; 
 }
 
 nav ul li:hover>ul {
@@ -145,7 +159,7 @@ nav ul li:hover>ul {
 
 nav ul ul li {
     display: block;
-    width: 119.5px;
+    width: 73.5%;
 }
 
 /* Stil für Hauptpunkte */
@@ -158,9 +172,22 @@ nav ul li a {
 nav ul ul li a {
     background-color: #555;
     color: #fff;
+    width: 100%;
 }
 
 .content {
     flex-flow: column;
+}
+
+@media only screen and (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        /* Ändern Sie die Ausrichtung für kleine Bildschirme */
+    }
+
+    nav ul li {
+        width: 100%;
+        /* Volle Breite für Hauptpunkte auf kleinen Bildschirmen */
+    }
 }
 </style>

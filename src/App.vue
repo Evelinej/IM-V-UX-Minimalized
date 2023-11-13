@@ -23,24 +23,24 @@
 @font-face {
   font-family: "Hepta Slab";
   src: local("Hepta Slab"),
-   url(./assets/fonts/HeptaSlab-Regular.ttf) format("truetype");
+    url(./assets/fonts/HeptaSlab-Regular.ttf) format("truetype");
 }
 
 /* Farben */
 :root {
-    --color1: #ffffb2;
-    --color2: #d7fcff;
-    --color3: #eacdff;
+  --color1: #ffffb2;
+  --color2: #d7fcff;
+  --color3: #eacdff;
 }
 
 h2 {
-    grid-column-start: 2;
-    font-size: 1.25em;
+  grid-column-start: 2;
+  font-size: 1.25em;
 }
 
 p {
-    grid-column-start: 2;
-    font-size: 1em;
+  grid-column-start: 2;
+  font-size: 1em;
 }
 
 #app {

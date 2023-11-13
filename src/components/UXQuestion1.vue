@@ -37,7 +37,7 @@
             </button>
         </div>
         <div class="content">
-            <div>
+            <div id="signUpBlock">
                 <input id="name" type="text" value="Dominic Musterperson"><br>
                 <div class="password-container">
                     <input id="password" type="password" value="1234" @keyup.enter="validateAnswer">
@@ -122,9 +122,8 @@ function close() {
 
 
 /* Styling für die Text- und Passwortfelder: Componentenspezifisch */
-input[type="text"],
-input[type="password"] {
-    width: 100%;
+input {
+    width: 90%;
     padding: 10px;
     margin: 5px 0;
     border: 1px solid #ccc;
@@ -156,7 +155,7 @@ input[type="password"] {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    width: 100%;
+    width: 95%;
 }
 
 .password-container {
@@ -185,4 +184,10 @@ input[type="password"] {
 
 #togglePW:hover {
     color: darkslategray;
-}</style>
+}
+
+#signUpBlock {
+    width: auto;
+
+}
+</style>

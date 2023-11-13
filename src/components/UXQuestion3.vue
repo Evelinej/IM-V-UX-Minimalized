@@ -185,4 +185,15 @@ svg.icon {
     cursor: pointer;
     margin: auto;
 }
+
+@media only screen and (max-width: 600px) {
+
+    .content {
+        flex-direction: column;
+    }
+    svg.icon {
+        width: 50px;
+        height: 50px;
+    }
+}
 </style>

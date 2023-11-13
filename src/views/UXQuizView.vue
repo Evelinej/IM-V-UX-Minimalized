@@ -65,13 +65,6 @@ export default {
 </script>
 
 <style>
-/* Farben */
-:root {
-  --color1: #ffffb2;
-  --color2: #d7fcff;
-  --color3: #eacdff;
-}
-
 .quiz {
   display: grid;
   grid-template-columns: 1fr 5fr 1fr;
@@ -140,5 +133,26 @@ svg {
   grid-template-rows: 1fr;
   grid-column-start: 2;
   height: auto;
+}
+
+@media only screen and (max-width: 400px) {
+
+
+  h4 {
+    font-size: 0.7em;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .question {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 10fr;
+    grid-template-areas:
+      "."
+      ".";
+    grid-column-start: 2;
+    height: 50vh;
+  }
 }
 </style>

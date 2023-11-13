@@ -39,6 +39,7 @@
         <div class="content">
 
             <button @click="toggleVariable">Toggle Variable</button>
+
             <p>Variable ist: {{ myVariable ? 'true' : 'false' }}</p>
 
         </div>
@@ -46,11 +47,15 @@
 </template>
 
 <script setup>
+// Funktionalität importieren
 import { defineProps, defineEmits } from 'vue';
 
+// Variablen
 const emit = defineEmits();
 let myVariable = false;
 
+
+// Funktionen
 const toggleVariable = () => {
     myVariable = !myVariable;
     emit('variableChanged', myVariable);
@@ -79,4 +84,14 @@ function close() {
 
 </script>
 
-<style scoped></style>
+<style scoped>
+
+@media  screen and (min-width:450px) {
+    
+}
+
+@media  screen and (min-width:768px) {
+    
+}
+
+</style>

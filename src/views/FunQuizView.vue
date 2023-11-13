@@ -2,13 +2,13 @@
   <section class="quiz" v-if="!parentVariable">
     <h2 style="grid-column-start: 2;">Take the Quiz!</h2>
 
-    <p>Variable in der Elternkomponente ist: {{ parentVariable ? 'true' : 'false' }}</p>
-
     <FunQuestion1 @variableChanged="handleVariableChange" />
   </section>
   <section class="congrats" v-else>
     <h2>Gratuliere!</h2>
     <p>Du hast das Quiz geschafft!</p>
+
+    <p>Variable in der Elternkomponente ist: {{ parentVariable ? 'true' : 'false' }}</p>
   </section>
 </template>
 
@@ -19,13 +19,15 @@ import { ref } from "vue";
 // Komponente importieren
 import FunQuestion1 from "@/components/FunQuestion1.vue";
 
+// Variablen
+const emits = ['variableChanged'];
+
 const parentVariable = ref(false);
 
+// Funktionen
 const handleVariableChange = (value) => {
   parentVariable.value = value;
 };
-
-// Funktionen
 
 
 </script>
