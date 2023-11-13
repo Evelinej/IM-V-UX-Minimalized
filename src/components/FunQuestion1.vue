@@ -38,17 +38,23 @@
         </div>
         <div class="content">
 
-            <p>Content</p>
+            <button @click="toggleVariable">Toggle Variable</button>
+            <p>Variable ist: {{ myVariable ? 'true' : 'false' }}</p>
 
         </div>
     </section>
 </template>
 
 <script setup>
-// Funktionalität importieren
-// import { inject, onMounted } from 'vue'
+import { defineProps, defineEmits } from 'vue';
 
-// const message = inject('message', 'default value')
+const emit = defineEmits();
+let myVariable = false;
+
+const toggleVariable = () => {
+    myVariable = !myVariable;
+    emit('variableChanged', myVariable);
+};
 
 
 
@@ -73,6 +79,4 @@ function close() {
 
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

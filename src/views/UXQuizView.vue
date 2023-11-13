@@ -8,7 +8,7 @@
   </section>
   <section v-else class="congrats">
     <h2>Gratuliere!</h2>
-    <p>Du hast das Quiz geschafft! Und ja, bei der letzten Aufgabe konntest du 3 von 4 Icons anwählen!</p>
+    <p>Du hast das Quiz geschafft! Und ja, bei der letzten Aufgabe konntest du 3 von 4 Icons anwählen. Gut gemacht :)</p>
   </section>
 </template>
 
