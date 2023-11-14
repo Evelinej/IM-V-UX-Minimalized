@@ -1,8 +1,9 @@
 <template>
-  <section class="quiz" v-if="!funQuiz1">
+  <section class="quiz" v-if="!funQuiz1 || !funQuiz2">
     <h2 style="grid-column-start: 2;">Take the Quiz!</h2>
 
-    <FunQuestion1 @variableChanged="handleVariableChange" />
+    <FunQuestion1 v-if="!funQuiz1" @variableChanged1="handleVariableChange1" />
+    <FunQuestion2 v-if="funQuiz1 && !funQuiz2" @variableChanged2="handleVariableChange2" />
   </section>
   <section class="congrats" v-else>
     <h2>Gratuliere!</h2>
@@ -16,20 +17,25 @@ import { ref } from "vue";
 
 // Komponente importieren
 import FunQuestion1 from "@/components/FunQuestion1.vue";
+import FunQuestion2 from "@/components/FunQuestion2.vue";
 
 
 //// Emit handling ////
 // Variablen
-const emits = ['variableChanged'];
+const emits = ['variableChanged1', 'variableChanged2'];
 
 const funQuiz1 = ref(false);
+const funQuiz2 = ref(false);
 
 // Funktionen
-const handleVariableChange = (value) => {
+const handleVariableChange1 = (value) => {
   funQuiz1.value = value;
 };
 
-
+const handleVariableChange2 = (value) => {
+  funQuiz2.value = value;
+};
+//// Emit handling ENDE ////
 
 
 </script>

@@ -1,6 +1,6 @@
 <template>
     <section class="questionText">
-        <h4>Du erhälst diese Meldung. Wie kannst du das Problem beheben?</h4>
+        <h4>2222 Du erhälst diese Meldung. Wie kannst du das Problem beheben?</h4>
     </section>
     <section class="question">
         <div class="tab">
@@ -40,7 +40,7 @@
 
             <!-- <button @click="toggleVariable">Toggle Variable</button> -->
             <div class="warning">
-                <p>Word konnte die Datei "word.docx_old" nicht öffnen.</p>
+                <p>___</p>
             </div>
             <div class="answers">
                 <button class="answer" @click="answer1">Den IT-Support kontaktieren.</button>
@@ -66,7 +66,7 @@ let myVariable = false;
 const toggleVariable = () => {
     answer3();
     myVariable = !myVariable;
-    emit('variableChanged1', myVariable);
+    emit('variableChanged2', myVariable);
 };
 //// Emit handling ENDE ////
 
