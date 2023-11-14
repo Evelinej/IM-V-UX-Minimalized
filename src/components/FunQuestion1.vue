@@ -1,6 +1,6 @@
 <template>
     <section class="questionText">
-        <h4>Du möchtest zur nächsten Frage navigieren.</h4>
+        <h4>Du erhälst diese Meldung. Wie kannst du das Problem beheben?</h4>
     </section>
     <section class="question">
         <div class="tab">
@@ -38,10 +38,16 @@
         </div>
         <div class="content">
 
-            <button @click="toggleVariable">Toggle Variable</button>
-
-            <p>Variable ist: {{ myVariable ? 'true' : 'false' }}</p>
-
+            <!-- <button @click="toggleVariable">Toggle Variable</button> -->
+            <div class="warning">
+                <p>Word konnte die Datei "word.docx_old" nicht öffnen.</p>
+            </div>
+            <div class="answers">
+                <button class="answer" @click="answer1">Den IT-Support kontaktieren.</button>
+                <button class="answer" @click="answer2">Das Dokument nicht öffnen und nach Hause gehen.</button>
+                <button class="answer" @click="toggleVariable">"_old" von der Dateiendung entfernen.</button>
+                <button class="answer" @click="answer4">Lie down. Try not to cry. Cry a lot.</button>
+            </div>
         </div>
     </section>
 </template>
@@ -50,18 +56,37 @@
 // Funktionalität importieren
 import { defineProps, defineEmits } from 'vue';
 
+
+//// Emit handling ////
 // Variablen
 const emit = defineEmits();
 let myVariable = false;
 
-
 // Funktionen
 const toggleVariable = () => {
+    answer3();
     myVariable = !myVariable;
     emit('variableChanged', myVariable);
 };
+//// Emit handling ENDE ////
 
 
+// Funktionen
+function answer1() {
+    alert("Hast du die Einleitung nicht gelesen? Du willst den Support umgehen!");
+}
+
+function answer2() {
+    alert("Das ist keine Lösung. Du musst das Problem lösen.")
+}
+
+function answer3() {
+    alert("Korrekt!")
+}
+
+function answer4() {
+    window.open("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/f425284e-d4ad-4c30-9dbe-a1694ef71335/d5t596e-52e3e707-88df-44c8-96e1-0f992162f877.jpg/v1/fill/w_1024,h_525,q_75,strp/lie_down__try_not_to_cry__cry_a_lot_combo_by_badflippy_d5t596e-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NTI1IiwicGF0aCI6IlwvZlwvZjQyNTI4NGUtZDRhZC00YzMwLTlkYmUtYTE2OTRlZjcxMzM1XC9kNXQ1OTZlLTUyZTNlNzA3LTg4ZGYtNDRjOC05NmUxLTBmOTkyMTYyZjg3Ny5qcGciLCJ3aWR0aCI6Ijw9MTAyNCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.4pRgICi7a0v4hHIFvV3u_9ayLGGuVb5R1YOlf_mabQQ");
+}
 
 
 
@@ -85,13 +110,18 @@ function close() {
 </script>
 
 <style scoped>
-
-@media  screen and (min-width:450px) {
-    
+.warning {
+    border-style: solid;
+    border-color: darkslategray;
+    padding: 2em;
+    /* background: linear-gradient(90deg, rgba(255, 255, 178, 1) 0%, rgba(215, 252, 255, 1) 71%, rgba(234, 205, 255, 1) 100%); */
+    background-color: var(--color2);
+    margin: 1em;
 }
 
-@media  screen and (min-width:768px) {
-    
+.answer {
+    width: auto;
+    height: 50px;
+    font-family: "Hepta Slab", serif;
 }
-
 </style>

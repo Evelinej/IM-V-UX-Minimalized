@@ -6,6 +6,7 @@
     <button class="start" @click="$router.push({ path: '/uxquiz' })">Los geht's!</button><br><br>
     <h2>First Level Support</h2>
     <p>Oder willst du den First-Level-Support umgehen, mach den Test!</p>
+    <p>(Viele der Meldungen sind vom GitHub Copilot geschrieben worden. Viel Spass xD)</p>
     <button class="start" @click="$router.push({ path: '/funquiz' })">Los geht's!</button><br><br>
   </section>
   <section class="author">

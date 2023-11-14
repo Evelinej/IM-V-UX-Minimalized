@@ -1,5 +1,5 @@
 <template>
-  <section class="quiz" v-if="!parentVariable">
+  <section class="quiz" v-if="!funQuiz1">
     <h2 style="grid-column-start: 2;">Take the Quiz!</h2>
 
     <FunQuestion1 @variableChanged="handleVariableChange" />
@@ -7,8 +7,6 @@
   <section class="congrats" v-else>
     <h2>Gratuliere!</h2>
     <p>Du hast das Quiz geschafft!</p>
-
-    <p>Variable in der Elternkomponente ist: {{ parentVariable ? 'true' : 'false' }}</p>
   </section>
 </template>
 
@@ -19,27 +17,24 @@ import { ref } from "vue";
 // Komponente importieren
 import FunQuestion1 from "@/components/FunQuestion1.vue";
 
+
+//// Emit handling ////
 // Variablen
 const emits = ['variableChanged'];
 
-const parentVariable = ref(false);
+const funQuiz1 = ref(false);
 
 // Funktionen
 const handleVariableChange = (value) => {
-  parentVariable.value = value;
+  funQuiz1.value = value;
 };
+
+
 
 
 </script>
 
 <style>
-/* Farben */
-:root {
-  --color1: #ffffb2;
-  --color2: #d7fcff;
-  --color3: #eacdff;
-}
-
 .quiz {
   display: grid;
   grid-template-columns: 1fr 5fr 1fr;
@@ -77,6 +72,7 @@ const handleVariableChange = (value) => {
   justify-content: center;
   align-items: center;
   padding: 2em;
+  flex-direction: column;
 }
 
 button {
