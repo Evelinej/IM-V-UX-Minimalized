@@ -91,6 +91,8 @@ function validateAnswer() {
 
     if (adviceNumber.style.color === "green" && adviceLetter.style.color === "green" && adviceCapitalLetter.style.color === "green" && adviceStar.style.color === "green") {
         emits('validationsuccess1', true); // Löse das Ereignis aus, um den Erfolg der Validierung zurückzugeben
+    } else {
+        alert("Leider erfüllt das Passwort nicht die Anforderungen. Versuch es nochmals.");
     }
 
 }
