@@ -43,10 +43,10 @@
                     <input id="password" type="password" value="1234" @keyup.enter="validateAnswer">
                     <button id="togglePW" @click="togglePassword()">👁</button>
                 </div>
-                <p style="color: green;" id="adviceNumber">Zahl</p>
-                <p style="color: red;" id="adviceLetter">Kleinbuchstaben.</p>
-                <p style="color: red;" id="adviceCapitalLetter">Grossbuchstaben</p>
-                <p style="color: red;" id="adviceStar">Sternchen *</p>
+                <p style="color: green;" id="adviceNumber" class="advice">Zahl</p>
+                <p style="color: red;" id="adviceLetter" class="advice">Kleinbuchstaben.</p>
+                <p style="color: red;" id="adviceCapitalLetter" class="advice">Grossbuchstaben</p>
+                <p style="color: red;" id="adviceStar" class="advice">Sternchen *</p>
                 <button id="signUp" @click="validateAnswer()">Sign Up</button>
             </div>
         </div>
@@ -117,11 +117,9 @@ function close() {
 </script>
 
 <style scooped>
-.content p {
+.advice {
     font-size: 0.5em;
 }
-
-
 
 /* Styling für die Text- und Passwortfelder: Componentenspezifisch */
 input {

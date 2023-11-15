@@ -1,6 +1,6 @@
 <template>
     <section class="questionText">
-        <h4>2222 Du erhälst diese Meldung. Wie kannst du das Problem beheben?</h4>
+        <h4>Auf deinen Computer loggen sich immer wieder Personen mit deinem Account ein.</h4>
     </section>
     <section class="question">
         <div class="tab">
@@ -40,13 +40,14 @@
 
             <!-- <button @click="toggleVariable">Toggle Variable</button> -->
             <div class="warning">
-                <p>___</p>
+                <p>Michele Musterperson</p><br>
+                <p>Passwort1!</p>
             </div>
             <div class="answers">
-                <button class="answer" @click="answer1">Den IT-Support kontaktieren.</button>
-                <button class="answer" @click="answer2">Das Dokument nicht öffnen und nach Hause gehen.</button>
-                <button class="answer" @click="toggleVariable">"_old" von der Dateiendung entfernen.</button>
-                <button class="answer" @click="answer4">Lie down. Try not to cry. Cry a lot.</button>
+                <button class="answer" @click="answer1">Account löschen und neuen erstellen.</button>
+                <button class="answer" @click="answer2">Set this place on fire!</button>
+                <button class="answer" @click="answer3">Den IT-Support kontaktieren.</button>
+                <button class="answer" @click="toggleVariable">Post-it mit Logindaten vom Bildschirm entfernen und neues Passwort setzen.</button>
             </div>
         </div>
     </section>
@@ -64,7 +65,7 @@ let myVariable = false;
 
 // Funktionen
 const toggleVariable = () => {
-    answer3();
+    answer4();
     myVariable = !myVariable;
     emit('variableChanged2', myVariable);
 };
@@ -72,20 +73,22 @@ const toggleVariable = () => {
 
 
 // Funktionen
+
+//  Antwortfunktionen
 function answer1() {
-    alert("Hast du die Einleitung nicht gelesen? Du willst den Support umgehen!");
+    alert("Das wird dein Problem nicht langfristig beheben...");
 }
 
 function answer2() {
-    alert("Das ist keine Lösung. Du musst das Problem lösen.")
+    window.open("https://duet-cdn.vox-cdn.com/thumbor/0x0:900x500/2400x1600/filters:focal(450x250:451x251):format(webp)/cdn.vox-cdn.com/uploads/chorus_asset/file/6438793/this-is-fine.jpg")
 }
 
 function answer3() {
-    alert("Korrekt!")
+    alert("Ich frage mich, ob du das Problem lösen willst. Du willst den Support umgehen!!")
 }
 
 function answer4() {
-    window.open("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/f425284e-d4ad-4c30-9dbe-a1694ef71335/d5t596e-52e3e707-88df-44c8-96e1-0f992162f877.jpg/v1/fill/w_1024,h_525,q_75,strp/lie_down__try_not_to_cry__cry_a_lot_combo_by_badflippy_d5t596e-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NTI1IiwicGF0aCI6IlwvZlwvZjQyNTI4NGUtZDRhZC00YzMwLTlkYmUtYTE2OTRlZjcxMzM1XC9kNXQ1OTZlLTUyZTNlNzA3LTg4ZGYtNDRjOC05NmUxLTBmOTkyMTYyZjg3Ny5qcGciLCJ3aWR0aCI6Ijw9MTAyNCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.4pRgICi7a0v4hHIFvV3u_9ayLGGuVb5R1YOlf_mabQQ");
+    alert("Korrekt! Nimm bitte auch das Post-it von deinem Tisch weg :,)")
 }
 
 
@@ -102,7 +105,7 @@ function maximize() {
 
 // Fenster schliessen
 function close() {
-    alert("Der einfache Weg bringt dich noch immer nicht ans Ziel. Versuch doch stattdessen die Aufgabe zu lösen.");
+    alert("Der einfache Weg bringt dich nicht immer ans Ziel. Versuch doch stattdessen die Aufgabe zu lösen.");
 }
 
 
@@ -115,8 +118,10 @@ function close() {
     border-color: darkslategray;
     padding: 2em;
     /* background: linear-gradient(90deg, rgba(255, 255, 178, 1) 0%, rgba(215, 252, 255, 1) 71%, rgba(234, 205, 255, 1) 100%); */
-    background-color: var(--color2);
+    background-color: var(--color1);
     margin: 1em;
+    height: 150px;
+    width: 150px;
 }
 
 .answer {

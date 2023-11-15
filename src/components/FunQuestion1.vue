@@ -72,6 +72,8 @@ const toggleVariable = () => {
 
 
 // Funktionen
+
+// Antwortfunktionen
 function answer1() {
     alert("Hast du die Einleitung nicht gelesen? Du willst den Support umgehen!");
 }
@@ -102,7 +104,7 @@ function maximize() {
 
 // Fenster schliessen
 function close() {
-    alert("Der einfache Weg bringt dich noch immer nicht ans Ziel. Versuch doch stattdessen die Aufgabe zu lösen.");
+    alert("Du versuchst den einfachen Weg zu gehen. Das bringt dich jedoch nicht ans Ziel.");
 }
 
 
