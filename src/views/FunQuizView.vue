@@ -1,13 +1,15 @@
 <template>
-  <section class="quiz" v-if="!funQuiz1 || !funQuiz2">
+  <section class="quiz" v-if="!funQuiz1 || !funQuiz2 || !funQuiz3 || !funQuiz4">
     <h2 style="grid-column-start: 2;">Take the Quiz!</h2>
 
     <FunQuestion1 v-if="!funQuiz1" @variableChanged1="handleVariableChange1" />
     <FunQuestion2 v-if="funQuiz1 && !funQuiz2" @variableChanged2="handleVariableChange2" />
+    <FunQuestion3 v-if="funQuiz1 && funQuiz2 && !funQuiz3" @variableChanged3="handleVariableChange3" />
+    <FunQuestion4 v-if="funQuiz1 && funQuiz2 && funQuiz3 && !funQuiz4" @variableChanged4="handleVariableChange4" />
   </section>
   <section class="congrats" v-else>
     <h2>Gratuliere!</h2>
-    <p>Du hast das Quiz geschafft!</p>
+    <p>Du hast das Quiz geschafft! Diese Supportanfragen kommen tatsächlich vor T_T</p>
   </section>
 </template>
 
@@ -18,14 +20,18 @@ import { ref } from "vue";
 // Komponente importieren
 import FunQuestion1 from "@/components/FunQuestion1.vue";
 import FunQuestion2 from "@/components/FunQuestion2.vue";
+import FunQuestion3 from "@/components/FunQuestion3.vue";
+import FunQuestion4 from "@/components/FunQuestion4.vue";
 
 
 //// Emit handling ////
 // Variablen
-const emits = ['variableChanged1', 'variableChanged2'];
+const emits = ['variableChanged1', 'variableChanged2', 'variableChanged3', 'variableChanged4'];
 
 const funQuiz1 = ref(false);
 const funQuiz2 = ref(false);
+const funQuiz3 = ref(false);
+const funQuiz4 = ref(false);
 
 // Funktionen
 const handleVariableChange1 = (value) => {
@@ -34,6 +40,14 @@ const handleVariableChange1 = (value) => {
 
 const handleVariableChange2 = (value) => {
   funQuiz2.value = value;
+};
+
+const handleVariableChange3 = (value) => {
+  funQuiz3.value = value;
+};
+
+const handleVariableChange4 = (value) => {
+  funQuiz4.value = value;
 };
 //// Emit handling ENDE ////
 

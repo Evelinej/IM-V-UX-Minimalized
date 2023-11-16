@@ -1,4 +1,4 @@
-# projekt
+# IM V | UX-Minimalized
 
 ## Project setup
 ```
