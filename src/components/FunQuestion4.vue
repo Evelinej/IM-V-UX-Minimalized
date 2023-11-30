@@ -103,7 +103,7 @@ function maximize() {
 
 // Fenster schliessen
 function close() {
-    alert("Der einfache Weg bringt dich nicht immer ans Ziel. Versuch doch stattdessen die Aufgabe zu lösen.");
+    window.open("https://i.pinimg.com/736x/1b/b5/0f/1bb50f6255e0456c41682811e14d7d8f.jpg", "_self");
 }
 
 
