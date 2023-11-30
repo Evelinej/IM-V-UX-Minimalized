@@ -1,7 +1,7 @@
 
 # IM V | UX-Minimalized
 
-Für meine Bachelorarbeit wollte ich etwas mit UX machen. Stand geht das Thema jetzt in Richtung Dark Patterns, daher habe ich auf halbem Weg des Projekts mehr Spass hineingebracht, was das ganze aber weniger seriös macht. Man kann nun zwei verschiedene Quiz spielen auf der Seite. Eines ist etwas ernster, das Zweite eher lustiger Natur.
+Für meine Bachelorarbeit wollte ich etwas mit UX machen. Stand jetzt geht das Thema jetzt in Richtung Dark Patterns, daher habe ich auf halbem Weg das Projekt etwas weniger ernst genommen und es lustiger gestaltet. Man kann nun zwei verschiedene Quiz spielen auf der Seite. Das Eine ist etwas ernster, das Zweite eher lustiger Natur.
 
 [Hier gehts zum Quiz!](https://796765-8.web.fhgr.ch/)
 
